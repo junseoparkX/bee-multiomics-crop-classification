@@ -1,0 +1,28 @@
+method,tissue,modality,feature_count
+STABL,A,Protein,31
+STABL,A,RNA,26
+STABL,A,RNA + Protein,57
+STABL,G,Protein,18
+STABL,G,RNA,3
+STABL,G,RNA + Protein,21
+STABL,H,Protein,9
+STABL,H,RNA,14
+STABL,H,RNA + Protein,23
+XGBoost + RFECV,A,Protein,3
+XGBoost + RFECV,A,RNA,14
+XGBoost + RFECV,A,RNA + Protein,17
+XGBoost + RFECV,G,Protein,4
+XGBoost + RFECV,G,RNA,13
+XGBoost + RFECV,G,RNA + Protein,17
+XGBoost + RFECV,H,Protein,4
+XGBoost + RFECV,H,RNA,14
+XGBoost + RFECV,H,RNA + Protein,18
+SVM + RFECV,A,Protein,4
+SVM + RFECV,A,RNA,5
+SVM + RFECV,A,RNA + Protein,9
+SVM + RFECV,G,Protein,2
+SVM + RFECV,G,RNA,14
+SVM + RFECV,G,RNA + Protein,16
+SVM + RFECV,H,Protein,5
+SVM + RFECV,H,RNA,13
+SVM + RFECV,H,RNA + Protein,18

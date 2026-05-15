@@ -1,0 +1,28 @@
+method,tissue,modality,d,micro_auc,macro_auc,precision,recall,f1,tissue_label,method_short,modality_short
+STABL,A,Protein,,0.687,0.717,0.437,0.6,0.499,Tissue A,STABL,Protein
+STABL,A,RNA,,0.446,0.428,0.07,0.225,0.107,Tissue A,STABL,RNA
+STABL,A,RNA + Protein,,0.578,0.653,0.487,0.4,0.306,Tissue A,STABL,Protein + RNA
+STABL,G,Protein,,0.322,0.324,0.015,0.025,0.019,Tissue G,STABL,Protein
+STABL,G,RNA,,0.537,0.496,0.214,0.25,0.231,Tissue G,STABL,RNA
+STABL,G,RNA + Protein,,0.334,0.344,0.153,0.075,0.077,Tissue G,STABL,Protein + RNA
+STABL,H,Protein,,0.327,0.341,0.066,0.075,0.07,Tissue H,STABL,Protein
+STABL,H,RNA,,0.841,0.842,0.646,0.55,0.534,Tissue H,STABL,RNA
+STABL,H,RNA + Protein,,0.534,0.513,0.168,0.25,0.198,Tissue H,STABL,Protein + RNA
+XGBoost + RFECV,A,Protein,3.0,0.749,0.778,0.48,0.625,0.539,Tissue A,XGB+RFECV,Protein
+XGBoost + RFECV,A,RNA,14.0,0.549,0.575,0.586,0.425,0.361,Tissue A,XGB+RFECV,RNA
+XGBoost + RFECV,A,RNA + Protein,17.0,0.716,0.766,0.576,0.65,0.598,Tissue A,XGB+RFECV,Protein + RNA
+XGBoost + RFECV,G,Protein,4.0,0.287,0.341,0.19,0.1,0.127,Tissue G,XGB+RFECV,Protein
+XGBoost + RFECV,G,RNA,13.0,0.612,0.653,0.375,0.325,0.294,Tissue G,XGB+RFECV,RNA
+XGBoost + RFECV,G,RNA + Protein,17.0,0.463,0.431,0.155,0.15,0.143,Tissue G,XGB+RFECV,Protein + RNA
+XGBoost + RFECV,H,Protein,4.0,0.799,0.829,0.727,0.625,0.575,Tissue H,XGB+RFECV,Protein
+XGBoost + RFECV,H,RNA,14.0,0.719,0.692,0.34,0.35,0.338,Tissue H,XGB+RFECV,RNA
+XGBoost + RFECV,H,RNA + Protein,18.0,0.765,0.742,0.488,0.6,0.532,Tissue H,XGB+RFECV,Protein + RNA
+SVM + RFECV,A,Protein,4.0,0.346,0.338,0.115,0.15,0.13,Tissue A,SVM+RFECV,Protein
+SVM + RFECV,A,RNA,5.0,0.463,0.45,0.208,0.325,0.233,Tissue A,SVM+RFECV,RNA
+SVM + RFECV,A,RNA + Protein,9.0,0.326,0.272,0.06,0.05,0.048,Tissue A,SVM+RFECV,Protein + RNA
+SVM + RFECV,G,Protein,2.0,0.291,0.321,0.25,0.025,0.045,Tissue G,SVM+RFECV,Protein
+SVM + RFECV,G,RNA,14.0,0.688,0.742,0.417,0.4,0.334,Tissue G,SVM+RFECV,RNA
+SVM + RFECV,G,RNA + Protein,16.0,0.471,0.418,0.17,0.175,0.137,Tissue G,SVM+RFECV,Protein + RNA
+SVM + RFECV,H,Protein,5.0,0.34,0.36,0.0,0.0,0.0,Tissue H,SVM+RFECV,Protein
+SVM + RFECV,H,RNA,13.0,0.801,0.8,0.582,0.6,0.549,Tissue H,SVM+RFECV,RNA
+SVM + RFECV,H,RNA + Protein,18.0,0.517,0.532,0.151,0.225,0.18,Tissue H,SVM+RFECV,Protein + RNA

@@ -1,0 +1,13 @@
+tissue,modality,method,overlap_with_stabl,selected_by_method,stabl_supported_fraction
+A,Protein,XGBoost + RFECV,1,3,0.3333333333333333
+A,Protein,SVM + RFECV,2,4,0.5
+A,RNA + Protein,XGBoost + RFECV,1,17,0.058823529411764705
+A,RNA + Protein,SVM + RFECV,2,9,0.2222222222222222
+G,Protein,XGBoost + RFECV,1,4,0.25
+G,Protein,SVM + RFECV,1,2,0.5
+G,RNA + Protein,XGBoost + RFECV,1,17,0.058823529411764705
+G,RNA + Protein,SVM + RFECV,2,16,0.125
+H,Protein,XGBoost + RFECV,2,4,0.5
+H,Protein,SVM + RFECV,3,5,0.6
+H,RNA + Protein,XGBoost + RFECV,2,18,0.1111111111111111
+H,RNA + Protein,SVM + RFECV,9,18,0.5

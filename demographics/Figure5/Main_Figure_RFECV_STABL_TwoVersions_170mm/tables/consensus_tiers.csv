@@ -1,0 +1,7 @@
+tissue,modality,selected_by_1_method,selected_by_2_methods,selected_by_3_methods,union_size
+A,Protein,32,3,0,35
+A,RNA + Protein,75,4,0,79
+G,Protein,20,2,0,22
+G,RNA + Protein,46,4,0,50
+H,Protein,10,1,2,13
+H,RNA + Protein,39,7,2,48
