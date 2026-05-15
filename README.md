@@ -1,20 +1,19 @@
 # Bee Multi-Omics Crop Classification
 
-This repository contains the analysis code, processed feature sets, and manuscript-style figures for a bee multi-omics crop classification project. The study evaluates whether crop-associated molecular signatures can be recovered from tissue-specific proteomic and transcriptomic profiles, with an emphasis on temporal validation from 2020 training samples to independent 2021 test samples.
+This repository contains the analysis code, feature-selection outputs, and finalized manuscript-style figures for a bee multi-omics crop classification project. The study evaluates whether crop-associated molecular signatures can be identified from tissue-specific proteomic and transcriptomic profiles, with an emphasis on temporal validation from 2020 training samples to independent 2021 test samples.
 
-The project compares differential-abundance-derived protein candidates with sparse and model-driven feature-selection approaches, including LIMMA-based top-ranked features, STABL-selected signatures, and RFECV-based machine learning pipelines.
+The repository is organized as a manuscript-supporting analysis archive. Final curated figures are separated from method-specific notebooks so that the main results can be inspected without rerunning the full workflow.
 
-## Repository organization
+## Repository structure
 
 ```text
-demographics/
-├── Figure4/
-│   ├── code/
-│   └── data/
-├── Figure5/
-│   ├── Main_Figure_RFECV_STABL_TwoVersions_...
-│   ├── Supplementary_RFECV_STABL_AllMetrics_...
-│   └── Figure5_RFECV_STABL_two_main_versions_...
+.
+├── README.md
+├── demographics/
+│   ├── Figure4/
+│   │   ├── code/
+│   │   └── data/
+│   └── Figure5/
 ├── Final_Figures/
 │   ├── Figure1_overall/
 │   ├── MainFigure_45/
@@ -27,17 +26,17 @@ demographics/
     └── data/
 ```
 
-The main folder for curated output is:
+The most important folder for viewing the organized final outputs is:
 
 ```text
-demographics/Final_Figures/
+Final_Figures/
 ```
 
-This folder contains the cleaned and organized final figures. Readers who only want to inspect the final manuscript-style outputs should start there.
+This folder contains the cleaned final figures prepared for manuscript-style presentation. Readers who only want to inspect the final results should start from this folder.
 
 ## Study design
 
-The analysis follows a temporal validation design. Feature selection and model development were performed using 2020 samples, and selected feature sets were evaluated on independent 2021 samples. This setup was used to reduce temporal leakage and to test whether crop-associated molecular signatures remain informative across years.
+The analysis uses a temporal validation framework. Feature selection and model development were performed using 2020 samples, and selected feature sets were evaluated on independent 2021 samples. This design reduces temporal leakage and tests whether crop-associated molecular signatures remain informative across years.
 
 The main tissue-specific analyses focus on:
 
@@ -45,7 +44,7 @@ The main tissue-specific analyses focus on:
 - Tissue G
 - Tissue H
 
-The primary goal is not only to maximize classification accuracy, but also to compare feature sparsity, feature-selection agreement, and external-year robustness.
+The primary objective is to evaluate not only predictive performance, but also feature sparsity, feature-selection agreement, and external-year robustness.
 
 ## Figure 4: LIMMA and STABL tissue-specific protein signatures
 
@@ -66,17 +65,18 @@ For each contrast, the top 20 non-Nosema proteins were selected primarily by LIM
 
 STABL was used as a sparse multivariable feature-selection method to identify compact tissue-specific proteomic signatures. Figure 4 evaluates whether these smaller STABL-selected signatures preserve crop-associated structure relative to the larger LIMMA-derived candidate pools.
 
-The figure includes:
+The Figure 4 workflow includes:
 
-- Heatmaps of selected tissue-specific proteomic signatures
+- Tissue-specific heatmaps of selected proteomic signatures
 - UMAP embeddings based on selected feature sets
 - Quantitative comparison of crop-associated and location-associated separation
+- Comparison between differential-analysis-derived and sparse multivariable feature sets
 
 ## Figure 5: Predictive performance, sparsity, and feature-selection agreement
 
 Figure 5 compares STABL with RFECV-based machine learning pipelines under the same 2020-to-2021 temporal validation framework.
 
-The RFECV analyses include:
+The RFECV workflows include:
 
 - XGBoost + RFECV
 - SVM + RFECV
@@ -96,7 +96,7 @@ Together, these analyses evaluate whether stronger predictive discrimination is 
 
 ## Methods overview
 
-The project compares three major feature-selection strategies.
+The project compares three main feature-selection strategies.
 
 | Method | Description |
 |---|---|
@@ -110,19 +110,21 @@ Model performance is evaluated using multiclass classification metrics, includin
 
 Most notebooks are designed to be run from their corresponding analysis folders, with input files loaded from nearby `data/` folders using relative paths.
 
-Important analysis folders include:
+Important workflow locations include:
 
 ```text
 demographics/Figure4/code/
-demographics/stabl/code/
-demographics/RFECV/svm/
-demographics/RFECV/xgboost/
+demographics/Figure4/data/
+RFECV/svm/
+RFECV/xgboost/
+stabl/code/
+stabl/data/
 ```
 
-Final curated figures are separated from method-specific notebooks and are available in:
+Final curated outputs are available in:
 
 ```text
-demographics/Final_Figures/
+Final_Figures/
 ```
 
 ## Interpretation
@@ -133,4 +135,4 @@ These results highlight the importance of evaluating selected molecular signatur
 
 ## Repository status
 
-This repository is organized as a manuscript-supporting analysis repository. The finalized figures are available in `demographics/Final_Figures/`, while the figure-specific and method-specific folders contain the notebooks and data files used to generate the corresponding analyses.
+This repository is organized as a manuscript-supporting analysis repository. Final figures are stored in `Final_Figures/`, while the figure-specific and method-specific folders contain the notebooks and data files used to generate the corresponding analyses.
